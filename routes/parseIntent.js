@@ -23,7 +23,7 @@ function performRequest(body, success, error){
 
 /* POST call */
 router.post('/', function(req, res, next) {
-      
+    console.log(JSON.stringify(req.body));      
     performRequest(req.body, function(data){
         res.status(200).json(data);
         console.log(data);
