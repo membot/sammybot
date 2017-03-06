@@ -105,7 +105,7 @@ function newEntry() {
         }); */
 
         var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "http://localhost:3000/respapi", true);
+        xhttp.open("POST", "https://evening-tor-68131.herokuapp.com/respapi", true);
 
         xhttp.onreadystatechange = function() {
             if (xhttp.readyState>3 && xhttp.status==200) {
@@ -116,8 +116,8 @@ function newEntry() {
                     messages.push("<b>" + botName + ":</b> " + response.result.fulfillment.speech);
                 }
                 else{
-                    botMessage = "Unable to connect to assistant.";
-                    messages.push("<b>" + botName + ":</b> " + "Unable to connect to assistant.");
+                    botMessage = "I am having trouble answering your query. You can logon to samsclub.com or login via app.";
+                    messages.push("<b>" + botName + ":</b> " + "I am having trouble answering your query. You can logon to samsclub.com or login via app");
                 }
 
                 //Speech(lastUserMessage);  //says what the user typed outloud
